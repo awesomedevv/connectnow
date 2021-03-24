@@ -1,0 +1,37 @@
+div.header {
+    display: flex;
+    width: 100%;
+    margin-top: 44px;
+    color: $white-color;
+    
+
+    
+    .menu {
+        font-family: $font-montserrat;
+        font-weight: 600;
+        font-size: 28px;
+        min-width: 280px;
+        padding-right: 50px;
+        height: 84px;
+
+        &.videogame {
+            padding-right: 50px;
+        }
+
+        .menu-item {
+            position: absolute;
+            padding-top: 40px;
+            padding-left: 30px;
+            cursor:pointer;
+        }
+
+        .background {
+            position: absolute;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 56px;
+            color: #ffffff20;
+            
+        }
+    }
+}

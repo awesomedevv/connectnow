@@ -1,0 +1,117 @@
+section {
+  &.search-panel {
+    
+    color: white;
+    font-family: $font-montserrat;
+
+    div.panel {
+      background-color: $secondary-background-color;
+      width: 100%;
+      
+
+      .item {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+        min-height: 80px;
+        font-size: 14px;
+
+
+        &.panel-header {
+          font-size: 20px !important;
+
+        }
+
+        &.clear {
+          min-height: 60px;
+        }
+
+        div.button {
+          background-color: $accent-color;
+          height: 36px;
+          width: 78px;
+          float: right;
+        }
+      }
+    }
+
+    * > div.order-by {
+      display: flex;
+      height: 160px;
+
+      .sort-direction {
+        width: 36px;
+        height: 36px;
+        background-color: $accent-color;
+      }
+
+      div.dropdown {
+        flex-grow: 1;
+        button.dropdown-toggle {
+          &.btn-primary {
+            border-radius: 0px !important;
+            border: none;
+            background-color: $third-background-color !important;
+          }
+          &.btn-primary:hover {
+            background-color: $third-background-color !important;
+          }
+          &.btn-primary:focus {
+            box-shadow: none !important;
+          }
+        }
+
+        div.dropdown-menu {
+          
+          width: 100%;
+          border-radius: 0px;
+          background-color: #182c47;
+          color: white;
+          transform: translate(0px, 36px) !important;
+          border-color: transparent;
+          a.dropdown-item {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  &.videos {
+
+    
+
+    div.content {
+      background-color: transparent;
+      overflow-y: auto;
+      height: 100%;
+    }
+    div.content::-webkit-scrollbar {
+      display: none;
+    }
+
+  }
+}
+
+div.search-field {
+  height: 36px;
+  width: 100%;
+  
+}
+
+
+input.search {
+  border: none;
+  height: 100%;
+  background-color: $third-background-color;
+  color: white;
+
+  &:focus {
+      outline: none;
+      
+  }
+}
+
+
+
+
+

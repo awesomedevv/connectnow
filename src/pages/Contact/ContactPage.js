@@ -11,7 +11,7 @@ export default function ContactPage() {
 
 
   return (
-    <div className="welcome-page page">
+    <div className="row">
       Contact Page
     </div>
   )

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap');
+
+$white-color: #ffffff;
+$accent-color: #5692e8;
+
+$primary-background-color: #eee;
+$secondary-background-color: #0e1a2b;
+$third-background-color: #182c47;
+
+$primary-background-image: linear-gradient(#081221, #03080f);
+
+$primary-text-color: #c1d1e8;
+
+
+$font-montserrat: 'Montserrat', sans-serif;
+$font-mulish: 'Mulish', sans-serif;
+
+:root {
+    --global-spacing: 60px;
+}

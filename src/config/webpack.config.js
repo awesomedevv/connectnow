@@ -1,10 +1,10 @@
 const webpack = require('webpack');
-const path              = require('path');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const resolve = dir => path.join(__dirname, '../', dir);
+const resolve = dir => path.join(__dirname, '../../', dir);
 
 const env = process.env.NODE_ENV || 'development';
 const isDev = env === 'development';
@@ -15,6 +15,11 @@ const WebpackDefinePluginConfig = new webpack.DefinePlugin({
   },
 });
 
+const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+  template: resolve('src/index.html'),
+  filename: 'index.html',
+  inject: 'body',
+});
 
 const CleanWebpackPluginConfig = new CleanWebpackPlugin({
   verbose: true,
@@ -41,8 +46,12 @@ module.exports = {
       _utils: resolve('src/utils/'),
       _api: resolve('src/api/'),
       _hooks: resolve('src/hooks/'),
-      _pages: resolve('src/pages/'),
-      _environment: resolve('src/environment/'),
+      _atoms: resolve('src/components/atoms/'),
+      _molecules: resolve('src/components/molecules/'),
+      _organisms: resolve('src/components/organisms/'),
+      _templates: resolve('src/components/templates/'),
+      _pages: resolve('src/components/pages/'),
+      _environment: resolve('src/components/environment/'),
       _store: resolve('src/store/'),
       _actions: resolve('src/store/actions/'),
       _reducers: resolve('src/store/reducers/'),
@@ -54,7 +63,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
-        include: [resolve('client')],
+        include: [resolve('src')],
       },
       {
         test: /\.css$/,
@@ -110,6 +119,7 @@ module.exports = {
     ],
   },
   plugins: [
+    HtmlWebpackPluginConfig,
     WebpackDefinePluginConfig,
     CleanWebpackPluginConfig,
   ],

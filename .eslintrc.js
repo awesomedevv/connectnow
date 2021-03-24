@@ -18,6 +18,6 @@ module.exports = {
   },
   rules: {
     semi: ['warn', 'never'],
-    'no-prototype-builtins': 0,
+    'react/prop-types': ['off'],
   },
 }
